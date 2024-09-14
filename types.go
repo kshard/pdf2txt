@@ -71,5 +71,6 @@ func (n *Node) UnicodeText() string {
 }
 
 type Parser struct {
+	Version         string
 	useDirectStream bool
 }

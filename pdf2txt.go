@@ -33,10 +33,11 @@ func New(opts ...Option) (*Parser, error) {
 	}
 
 	if !p.useDirectStream {
-		_, err := p.checkVersion()
+		vsn, err := p.checkVersion()
 		if err != nil {
 			return nil, err
 		}
+		p.Version = vsn
 	}
 
 	return p, nil
